@@ -4,16 +4,72 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      /* ===== MOBILE ADAPTATION ===== */
+      @media only screen and (max-width: 600px) {
+        .container {
+          width: 100% !important;
+          max-width: 100% !important;
+        }
+
+        .stack {
+          display: block !important;
+          width: 100% !important;
+          max-width: 100% !important;
+        }
+
+        .pr-0 {
+          padding-right: 0 !important;
+        }
+        .pl-0 {
+          padding-left: 0 !important;
+        }
+        .mb-16 {
+          padding-bottom: 16px !important;
+        }
+
+        .img-fluid {
+          width: 100% !important;
+          max-width: 100% !important;
+          height: auto !important;
+        }
+
+        .center {
+          text-align: center !important;
+        }
+
+        .btn-full {
+          width: 100% !important;
+        }
+        .btn-full a,
+        .btn-full button {
+          display: block !important;
+          width: 100% !important;
+          box-sizing: border-box !important;
+          text-align: center !important;
+        }
+
+        h1 {
+          font-size: 28px !important;
+          line-height: 32px !important;
+        }
+        h3 {
+          font-size: 20px !important;
+          line-height: 24px !important;
+        }
+      }
+    </style>
   </head>
-  <style>
-    *,
-    *::before,
-    *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-  </style>
+
   <body
     style="
       margin: 0;
@@ -23,7 +79,7 @@
     "
   >
     <!-- header & content-Text -->
-    <table style="padding: 0 15px; width: 600px; margin: 0 auto">
+    <table class="container" style="padding: 0 15px; width: 600px; margin: 0 auto" cellpadding="0" cellspacing="0">
       <tr>
         <td style="width: 100%">
           <img
@@ -76,13 +132,15 @@
     </table>
 
     <!-- content Items section -->
-    <table style="padding: 0 15px; width: 600px; margin: 0 auto">
+    <table class="container" style="padding: 0 15px; width: 600px; margin: 0 auto" cellpadding="0" cellspacing="0">
       <tr>
         <!-- IMAGE -->
         <td
+          class="stack pr-0 mb-16"
           style="padding-right: 16px; padding-bottom: 20px; vertical-align: top"
         >
           <img
+            class="img-fluid"
             src="https://raw.githubusercontent.com/antonmokryi/MarkupForEmail/main/Imges/Rectangle%206.png"
             alt="Fruity crown"
             style="
@@ -97,6 +155,7 @@
 
         <!-- Text -->
         <td
+          class="stack center"
           style="vertical-align: top; font-family: Arial, Helvetica, sans-serif"
         >
           <h3
@@ -124,12 +183,15 @@
           </p>
         </td>
       </tr>
+
       <tr>
         <!-- IMAGE -->
         <td
+          class="stack pr-0 mb-16"
           style="padding-right: 16px; padding-bottom: 20px; vertical-align: top"
         >
           <img
+            class="img-fluid"
             src="https://raw.githubusercontent.com/antonmokryi/MarkupForEmail/main/Imges/Rectangle%206.png"
             alt="Fruity crown"
             style="
@@ -144,6 +206,7 @@
 
         <!-- Text -->
         <td
+          class="stack center"
           style="vertical-align: top; font-family: Arial, Helvetica, sans-serif"
         >
           <h3
@@ -171,12 +234,15 @@
           </p>
         </td>
       </tr>
+
       <tr>
         <!-- IMAGE -->
         <td
+          class="stack pr-0 mb-16"
           style="padding-right: 16px; padding-bottom: 20px; vertical-align: top"
         >
           <img
+            class="img-fluid"
             src="https://raw.githubusercontent.com/antonmokryi/MarkupForEmail/main/Imges/Rectangle%206.png"
             alt="Fruity crown"
             style="
@@ -191,6 +257,7 @@
 
         <!-- Text -->
         <td
+          class="stack center"
           style="vertical-align: top; font-family: Arial, Helvetica, sans-serif"
         >
           <h3
@@ -219,14 +286,19 @@
         </td>
       </tr>
     </table>
+
     <!--RED BUTTON -->
     <table
+      class="container"
       align="center"
       style="padding: 50px 15px; width: 600px; height: auto; margin: 0 auto"
+      cellpadding="0"
+      cellspacing="0"
     >
       <tr>
         <td align="center" style="text-align: center; width: 100%">
           <table
+            class="btn-full"
             role="presentation"
             align="center"
             cellpadding="0"
@@ -266,6 +338,7 @@
     <table
       style="
         padding: 0;
+        padding-bottom: 20px;
         width: 100%;
         margin: 0 auto;
         background: #252638;
@@ -313,13 +386,14 @@
       <tr>
         <td style="padding: 8px 24px 20px">
           <table
+            class="container"
             style="width: 600px; margin: 0 auto"
             cellpadding="0"
             cellspacing="0"
           >
             <tr>
               <!-- GAME 1 -->
-              <td valign="top" style="width: 33.33%; padding-right: 12px">
+              <td class="stack pr-0 mb-16" valign="top" style="width: 33.33%; padding-right: 12px">
                 <table cellpadding="0" cellspacing="0" style="width: 100%">
                   <tr>
                     <td
@@ -328,7 +402,7 @@
                         height: 122px;
                         vertical-align: bottom;
                         background: #111111;
-                        background-image: url(&quot;https://raw.githubusercontent.com/antonmokryi/MarkupForEmail/main/Imges/DragonImg.png&quot;);
+                        background-image: url('https://raw.githubusercontent.com/antonmokryi/MarkupForEmail/main/Imges/DragonImg.png');
                         background-size: cover;
                         background-position: center;
                         border-radius: 18px;
@@ -353,28 +427,15 @@
 
                   <tr>
                     <td style="padding-top: 10px">
-                      <table
-                        cellpadding="0"
-                        cellspacing="0"
-                        style="width: 100%"
-                      >
+                      <table cellpadding="0" cellspacing="0" style="width: 100%">
                         <tr>
-                          <td
-                            width="18"
-                            valign="middle"
-                            style="padding-right: 8px"
-                          >
+                          <td width="18" valign="middle" style="padding-right: 8px">
                             <img
                               src="https://raw.githubusercontent.com/antonmokryi/MarkupForEmail/main/Imges/icon.png"
                               width="18"
                               height="18"
                               alt=""
-                              style="
-                                display: block;
-                                width: 18px;
-                                height: 18px;
-                                border: 0;
-                              "
+                              style="display: block; width: 18px; height: 18px; border: 0;"
                             />
                           </td>
                           <td
@@ -396,7 +457,7 @@
               </td>
 
               <!-- GAME 2 -->
-              <td valign="top" style="width: 33.33%; padding: 0 6px">
+              <td class="stack pr-0 pl-0 mb-16" valign="top" style="width: 33.33%; padding: 0 6px">
                 <table cellpadding="0" cellspacing="0" style="width: 100%">
                   <tr>
                     <td
@@ -405,7 +466,7 @@
                         height: 122px;
                         vertical-align: bottom;
                         background: #111111;
-                        background-image: url(&quot;https://raw.githubusercontent.com/antonmokryi/MarkupForEmail/main/Imges/DragonImg.png&quot;);
+                        background-image: url('https://raw.githubusercontent.com/antonmokryi/MarkupForEmail/main/Imges/DragonImg.png');
                         background-size: cover;
                         background-position: center;
                         border-radius: 18px;
@@ -430,28 +491,15 @@
 
                   <tr>
                     <td style="padding-top: 10px">
-                      <table
-                        cellpadding="0"
-                        cellspacing="0"
-                        style="width: 100%"
-                      >
+                      <table cellpadding="0" cellspacing="0" style="width: 100%">
                         <tr>
-                          <td
-                            width="18"
-                            valign="middle"
-                            style="padding-right: 8px"
-                          >
+                          <td width="18" valign="middle" style="padding-right: 8px">
                             <img
                               src="https://raw.githubusercontent.com/antonmokryi/MarkupForEmail/main/Imges/icon.png"
                               width="18"
                               height="18"
                               alt=""
-                              style="
-                                display: block;
-                                width: 18px;
-                                height: 18px;
-                                border: 0;
-                              "
+                              style="display: block; width: 18px; height: 18px; border: 0;"
                             />
                           </td>
                           <td
@@ -473,7 +521,7 @@
               </td>
 
               <!-- GAME 3 -->
-              <td valign="top" style="width: 33.33%; padding-left: 12px">
+              <td class="stack pl-0 mb-16" valign="top" style="width: 33.33%; padding-left: 12px">
                 <table cellpadding="0" cellspacing="0" style="width: 100%">
                   <tr>
                     <td
@@ -482,7 +530,7 @@
                         height: 122px;
                         vertical-align: bottom;
                         background: #111111;
-                        background-image: url(&quot;https://raw.githubusercontent.com/antonmokryi/MarkupForEmail/main/Imges/DragonImg.png&quot;);
+                        background-image: url('https://raw.githubusercontent.com/antonmokryi/MarkupForEmail/main/Imges/DragonImg.png');
                         background-size: cover;
                         background-position: center;
                         border-radius: 18px;
@@ -507,28 +555,15 @@
 
                   <tr>
                     <td style="padding-top: 10px">
-                      <table
-                        cellpadding="0"
-                        cellspacing="0"
-                        style="width: 100%"
-                      >
+                      <table cellpadding="0" cellspacing="0" style="width: 100%">
                         <tr>
-                          <td
-                            width="18"
-                            valign="middle"
-                            style="padding-right: 8px"
-                          >
+                          <td width="18" valign="middle" style="padding-right: 8px">
                             <img
                               src="https://raw.githubusercontent.com/antonmokryi/MarkupForEmail/main/Imges/icon.png"
                               width="18"
                               height="18"
                               alt=""
-                              style="
-                                display: block;
-                                width: 18px;
-                                height: 18px;
-                                border: 0;
-                              "
+                              style="display: block; width: 18px; height: 18px; border: 0;"
                             />
                           </td>
                           <td
@@ -550,45 +585,221 @@
               </td>
             </tr>
           </table>
-          <tr style="text-align: center">
-            <td>
-              <button
-                style="
-                  display: inline-block;
-                  background-color: rgba(218, 46, 113, 1);
-                  border-radius: 8px;
-                  padding: 8px 60px;
-                "
-              >
-                Грати
-              </button>
-            </td>
-          </tr>
+
+          <!-- (мінімально виправлено) кнопка рядком через вкладену таблицю -->
+          <table class="btn-full" role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-top: 18px;">
+            <tr>
+              <td align="center" style="text-align:center;">
+                <button
+                  style="
+                    display: inline-block;
+                    background-color: rgba(218, 46, 113, 1);
+                    border-radius: 8px;
+                    padding: 8px 60px;
+                    border: none;
+                    color: #ffffff;
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-weight: 700;
+                  "
+                >
+                  Грати
+                </button>
+              </td>
+            </tr>
+          </table>
+
         </td>
       </tr>
     </table>
 
     <!-- Footer -->
-     <table style="width: 100%; background: linear-gradient(135deg, #494C6A 0%, #252638 100%);">
-      <tr style="max-width: 600px;
-        display: block;
-        margin: 0 auto;
-        width: 100%;
-      ">
-        <tr>
-          <tr>
-            <img src="https://raw.githubusercontent.com/antonmokryi/MarkupForEmail/main/Imges/call_24px.png
-" alt="">
-            <h3>Встановлюйте додаток 
-та отримуйте бонус</h3>
-          </tr>
-          <td>
-            <p>Для встановлення додатка переходьте
-за посиланням або натисніть кнопку “Завантажити”</p>
-          </td>
-        </tr>
+    <table
+      role="presentation"
+      width="100%"
+      cellpadding="0"
+      cellspacing="0"
+      style="background:#252638; background:linear-gradient(135deg,#494C6A 0%,#252638 100%);"
+    >
+      <tr>
+        <td align="center" style="padding:16px;">
 
+          <!-- CARD -->
+          <table
+            class="container"
+            role="presentation"
+            width="600"
+            cellpadding="0"
+            cellspacing="0"
+            style="width:600px; max-width:600px; border-radius:16px; overflow:hidden;"
+          >
+            <tr>
+
+              <!-- LEFT (gradient) -->
+              <td class="stack" valign="top"
+                style="padding:16px; background:linear-gradient(135deg,#FF3B3B 0%,#6600CC 100%);">
+                <table width="100%" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td width="34" valign="top" style="padding-right:10px;">
+                      <img src="https://raw.githubusercontent.com/antonmokryi/MarkupForEmail/main/Imges/phoneCall.png"
+                        width="28" height="28" alt=""
+                        style="display:block; width:28px; height:28px; border:0;">
+                    </td>
+                    <td valign="top" style="color:#ffffff;">
+                      <h3 style="margin:0; font-size:14px; line-height:18px; font-weight:700;">
+                        Встановлюйте додаток<br>та отримуйте бонус
+                      </h3>
+                      <p style="margin:8px 0 0; font-size:11px; line-height:15px; color:#f2f2f2;">
+                        Для встановлення додатка переходьте<br>
+                        за посиланням або натисніть кнопку “Завантажити”
+                      </p>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+
+              <!-- RIGHT -->
+              <td class="stack center" width="210"
+                style="background:#3b3e4f; padding:16px;">
+                <table class="btn-full" role="presentation" cellpadding="0" cellspacing="0" style="border-collapse:separate; margin:0 auto;">
+                  <tr>
+                    <td style="border-radius:12px; background:linear-gradient(135deg,#FF3B3B 0%,#6600CC 100%);">
+                      <a href="#"
+                        style="display:inline-block; padding:10px 18px;
+                               font-size:14px; font-weight:700; color:#ffffff; text-decoration: none;
+                               font-family: Arial, Helvetica, sans-serif;">
+                        <img src="https://raw.githubusercontent.com/antonmokryi/MarkupForEmail/main/Imges/CloidImg.png"
+                          width="16" height="16" alt=""
+                          style="display:inline-block; vertical-align:middle; margin-right:8px; border:0;">
+                        <span style="vertical-align:middle;">Завантажити</span>
+                      </a>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+
+            </tr>
+          </table>
+        </td>
       </tr>
-     </table>
+
+      <!-- SUPPORT / FOOTER SECTION -->
+      <tr>
+        <td style="padding:18px 24px; background: linear-gradient(135deg, #494C6A 0%, #252638 100%);">
+          <table class="container" width="600px" style="border-collapse:collapse; margin: 0 auto;" cellpadding="0" cellspacing="0">
+
+            <!-- BLUE CARD -->
+            <tr>
+              <td style="padding:0 0 14px;">
+                <table width="100%"
+                  style="border-collapse:collapse; border-radius:16px; overflow:hidden;" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <!-- left gradient -->
+                    <td class="stack" valign="top"
+                      style="padding:16px; background:#2b4cff;
+                             background:linear-gradient(90deg,#4aa3ff 0%, #5a20ff 100%);
+                             color:#ffffff;">
+                      <table width="100%" style="border-collapse:collapse;" cellpadding="0" cellspacing="0">
+                        <tr>
+                          <td width="34" valign="top" style="padding-right:10px;">
+                            <img src="https://raw.githubusercontent.com/antonmokryi/MarkupForEmail/main/Imges/ringtone.png" width="28" height="28" alt=""
+                              style="display:block; width:28px; height:28px; border:0;">
+                          </td>
+                          <td valign="top">
+                            <div style="font-size:14px; line-height:18px; font-weight:700; font-family: Arial, Helvetica, sans-serif;">
+                              Будь завжди з нами на зв’язку!<br>
+                              Підключай Telegram Bot
+                            </div>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+
+                    <!-- right dark -->
+                    <td class="stack center" valign="middle" align="center"
+                      style="background:#3b3e4f; padding:16px;">
+                      <table class="btn-full" style="border-collapse:separate; margin:0 auto;" cellpadding="0" cellspacing="0">
+                        <tr>
+                          <td style="border-radius:12px; background:#3a63ff;">
+                            <a href="#"
+                              style="display:inline-block; padding:10px 18px;
+                                     font-size:14px; line-height:16px; font-weight:700; color:#ffffff; text-decoration:none;
+                                     font-family: Arial, Helvetica, sans-serif;">
+                              <img src="https://raw.githubusercontent.com/antonmokryi/MarkupForEmail/main/Imges/tg.png" width="16" height="16" alt=""
+                                style="display:inline-block; vertical-align:middle; border:0; margin-right:8px;">
+                              <span style="vertical-align:middle;">Підключитися</span>
+                            </a>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+            <!-- dashed divider -->
+            <tr>
+              <td style="padding:6px 0 12px;">
+                <div style="border-top:1px dashed rgba(255,255,255,0.25); line-height:0;">&nbsp;</div>
+              </td>
+            </tr>
+
+            <!-- QUESTIONS + CALL BUTTON -->
+            <tr>
+              <td style="padding:4px 0 12px;">
+                <table role="presentation" width="100%" style="border-collapse:collapse;" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td class="stack" valign="middle" style="color:#ffffff; padding-right:12px; font-family: Arial, Helvetica, sans-serif;">
+                      <div style="font-size:14px; line-height:18px; font-weight:700;">Залишились питання?</div>
+                      <div style="font-size:11px; line-height:15px; color:#bfc2cf; padding-top:4px;">
+                        Наші фахівці допоможуть розібратися
+                      </div>
+                    </td>
+
+                    <td class="stack center" width="210" valign="middle" align="right" style="padding-top:12px;">
+                      <table class="btn-full" style="border-collapse:separate; margin:0 auto;" cellpadding="0" cellspacing="0">
+                        <tr>
+                          <td style="border-radius:12px; background:linear-gradient(135deg,#ff2f54 0%, #7a00c9 100%);">
+                            <a href="#"
+                              style="display:inline-block; padding:10px 16px; font-family:Arial, Helvetica, sans-serif;
+                                     font-size:13px; line-height:16px; font-weight:700; color:#ffffff; text-decoration:none;">
+                              <img src="https://raw.githubusercontent.com/antonmokryi/MarkupForEmail/main/Imges/call_24px.png" width="16" height="16" alt=""
+                                style="display:inline-block; vertical-align:middle; border:0; margin-right:8px;">
+                              <span style="vertical-align:middle;">Замовити дзвінок</span>
+                            </a>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+         
+            <tr>
+              <td style="padding:6px 0 14px;">
+                <div style="border-top:1px dashed rgba(255,255,255,0.25); line-height:0; font-size:0;">&nbsp;</div>
+              </td>
+            </tr>
+
+            <!-- foot text -->
+            <tr>
+              <td style=" text-align:center; padding:0 10px;">
+                <p style="margin:0; font-size:10px; line-height:14px; color:#9aa0b1;">
+                  Ви отримали цей лист, тому що зареєстровані на google.com та підтвердили свою згоду з Правилами та Умовами.
+                  Для того, щоб відписатися від розсилки, натисніть на
+                  <a href="#" style="color:#ff2f54; text-decoration:none;">посилання</a>
+                </p>
+              </td>
+            </tr>
+
+          </table>
+        </td>
+      </tr>
+    </table>
+
   </body>
 </html>
